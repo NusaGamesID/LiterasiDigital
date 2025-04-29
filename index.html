@@ -1,0 +1,315 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Website Literasi Sekolah
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Nunito', sans-serif;
+    }
+    /* Entrance animation */
+    .fade-in {
+      animation: fadeInAnimation 1.2s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeInAnimation {
+      to {
+        opacity: 1;
+      }
+    }
+    /* Bounce effect on clickable cards */
+    .clickable:hover {
+      animation: bounce 0.6s;
+      cursor: pointer;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-blue-100 to-white min-h-screen flex flex-col">
+  <header class="bg-blue-700 text-white shadow-md sticky top-0 z-50 fade-in">
+   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-extrabold tracking-wide">
+     <i class="fas fa-book-reader mr-2">
+     </i>
+     Literasi Sekolah
+    </h1>
+    <nav class="space-x-6 text-lg font-semibold hidden md:flex">
+     <a class="hover:text-yellow-300 transition" href="#literasi">
+      Literasi
+     </a>
+     <a class="hover:text-yellow-300 transition" href="#video">
+      Video
+     </a>
+     <a class="hover:text-yellow-300 transition" href="#tentang">
+      Tentang
+     </a>
+     <a class="hover:text-yellow-300 transition" href="#kontak">
+      Kontak
+     </a>
+    </nav>
+    <button class="md:hidden focus:outline-none" id="menu-btn">
+     <i class="fas fa-bars text-2xl">
+     </i>
+    </button>
+   </div>
+   <nav class="hidden bg-blue-600 text-white px-6 py-4 space-y-3 md:hidden" id="mobile-menu">
+    <a class="block hover:text-yellow-300 transition" href="#literasi">
+     Literasi
+    </a>
+    <a class="block hover:text-yellow-300 transition" href="#video">
+     Video
+    </a>
+    <a class="block hover:text-yellow-300 transition" href="#tentang">
+     Tentang
+    </a>
+    <a class="block hover:text-yellow-300 transition" href="#kontak">
+     Kontak
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow container mx-auto px-6 py-10 fade-in">
+   <section class="mb-16 text-center">
+    <h2 class="text-4xl font-extrabold text-blue-800 mb-4">
+     Selamat Datang di Website Literasi Sekolah
+    </h2>
+    <p class="text-lg text-blue-700 max-w-3xl mx-auto">
+     Tingkatkan kemampuan membaca dan menulis dengan berbagai materi literasi menarik dan video edukatif yang kami sediakan khusus untuk para siswa.
+    </p>
+   </section>
+   <section class="mb-20" id="literasi">
+    <h3 class="text-3xl font-bold text-blue-900 mb-8 text-center">
+     Materi Literasi
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+     <article aria-label="Materi literasi Mengenal Literasi dan Manfaatnya untuk Siswa" class="clickable bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.kompas.com/skola/read/2021/10/12/130000369/mengenal-literasi-dan-manfaatnya-untuk-siswa', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.kompas.com/skola/read/2021/10/12/130000369/mengenal-literasi-dan-manfaatnya-untuk-siswa', '_blank')}" tabindex="0">
+      <img alt="Ilustrasi buku terbuka dengan anak-anak sedang membaca di taman sekolah" class="rounded-md mb-4 w-full object-cover h-48" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5700e294-a74a-46a8-3fcf-67e547b21a83.jpg" width="400"/>
+      <h4 class="text-xl font-semibold text-blue-800 mb-2">
+       Mengenal Literasi dan Manfaatnya
+      </h4>
+      <p class="text-blue-700">
+       Pelajari apa itu literasi dan bagaimana literasi dapat membantu kamu menjadi lebih pintar dan percaya diri.
+      </p>
+     </article>
+     <article aria-label="Materi literasi Pengertian Literasi dan Jenis-jenisnya" class="clickable bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.britannica.com/topic/literacy', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.britannica.com/topic/literacy', '_blank')}" tabindex="0">
+      <img alt="Gambar anak-anak sedang membaca buku di perpustakaan sekolah dengan latar rak buku" class="rounded-md mb-4 w-full object-cover h-48" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/81bbe5f7-8dc1-48ac-88f8-70cc034ba3f0.jpg" width="400"/>
+      <h4 class="text-xl font-semibold text-blue-800 mb-2">
+       Pengertian Literasi dan Jenis-jenisnya
+      </h4>
+      <p class="text-blue-700">
+       Kenali berbagai jenis literasi yang penting untuk kehidupan sehari-hari dan masa depanmu.
+      </p>
+     </article>
+     <article aria-label="Materi literasi Pentingnya Membaca Buku untuk Anak Sekolah" class="clickable bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.unicef.org/indonesia/id/edukasi', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.unicef.org/indonesia/id/edukasi', '_blank')}" tabindex="0">
+      <img alt="Seorang anak perempuan sedang membaca buku dengan latar belakang perpustakaan sekolah" class="rounded-md mb-4 w-full object-cover h-48" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/845751db-7878-47cc-17d6-db3065c1b72e.jpg" width="400"/>
+      <h4 class="text-xl font-semibold text-blue-800 mb-2">
+       Pentingnya Membaca Buku
+      </h4>
+      <p class="text-blue-700">
+       Temukan alasan mengapa membaca buku sangat penting untuk perkembangan otak dan kreativitasmu.
+      </p>
+     </article>
+     <article aria-label="Materi literasi Literasi Abad 21 dan Keterampilan yang Dibutuhkan" class="clickable bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.literacyworldwide.org/docs/default-source/where-we-stand/ila_pb_21stcenturyliteracies.pdf', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.literacyworldwide.org/docs/default-source/where-we-stand/ila_pb_21stcenturyliteracies.pdf', '_blank')}" tabindex="0">
+      <img alt="Ilustrasi anak-anak menggunakan tablet dan laptop belajar literasi digital di sekolah" class="rounded-md mb-4 w-full object-cover h-48" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/33f66522-bbe3-4c95-5641-a040cb8e5609.jpg" width="400"/>
+      <h4 class="text-xl font-semibold text-blue-800 mb-2">
+       Literasi Abad 21
+      </h4>
+      <p class="text-blue-700">
+       Pelajari keterampilan literasi yang dibutuhkan di era digital dan bagaimana kamu bisa menguasainya.
+      </p>
+     </article>
+     <article aria-label="Materi literasi Strategi Membaca Efektif untuk Siswa" class="clickable bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.readingrockets.org/article/reading-strategies', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.readingrockets.org/article/reading-strategies', '_blank')}" tabindex="0">
+      <img alt="Gambar seorang guru sedang mengajarkan strategi membaca kepada siswa di kelas" class="rounded-md mb-4 w-full object-cover h-48" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3e08cd35-52b8-4eb7-afdd-59858adcea58.jpg" width="400"/>
+      <h4 class="text-xl font-semibold text-blue-800 mb-2">
+       Strategi Membaca Efektif
+      </h4>
+      <p class="text-blue-700">
+       Temukan berbagai strategi membaca yang dapat membantumu memahami teks dengan lebih baik.
+      </p>
+     </article>
+     <article aria-label="Materi literasi Apa Itu Literasi dan Dampaknya pada Kehidupan" class="clickable bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.literacytrust.org.uk/resources/what-is-literacy/', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.literacytrust.org.uk/resources/what-is-literacy/', '_blank')}" tabindex="0">
+      <img alt="Ilustrasi anak-anak sedang berdiskusi dan membaca buku bersama di ruang kelas" class="rounded-md mb-4 w-full object-cover h-48" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/549065f6-9306-4669-49ad-fbce35ead4db.jpg" width="400"/>
+      <h4 class="text-xl font-semibold text-blue-800 mb-2">
+       Apa Itu Literasi?
+      </h4>
+      <p class="text-blue-700">
+       Memahami definisi literasi dan bagaimana literasi mempengaruhi kehidupan sehari-hari.
+      </p>
+     </article>
+     <article aria-label="Materi literasi Strategi Memahami Bacaan dengan Baik" class="clickable bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.readingrockets.org/article/reading-comprehension-strategies', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.readingrockets.org/article/reading-comprehension-strategies', '_blank')}" tabindex="0">
+      <img alt="Gambar anak laki-laki dan perempuan sedang membaca buku bersama di perpustakaan sekolah" class="rounded-md mb-4 w-full object-cover h-48" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fd6d5928-4211-4591-1829-56c966ee9ccc.jpg" width="400"/>
+      <h4 class="text-xl font-semibold text-blue-800 mb-2">
+       Strategi Memahami Bacaan
+      </h4>
+      <p class="text-blue-700">
+       Pelajari cara-cara efektif untuk memahami isi bacaan dan meningkatkan kemampuan literasi.
+      </p>
+     </article>
+     <article aria-label="Materi literasi Manfaat Membaca untuk Perkembangan Anak" class="clickable bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.scholastic.com/parents/books-and-reading/raise-a-reader-blog/importance-reading.html', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.scholastic.com/parents/books-and-reading/raise-a-reader-blog/importance-reading.html', '_blank')}" tabindex="0">
+      <img alt="Ilustrasi anak-anak tersenyum sambil membaca buku di taman sekolah" class="rounded-md mb-4 w-full object-cover h-48" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f0b63c04-e529-49cf-0b0f-c56c896e8db2.jpg" width="400"/>
+      <h4 class="text-xl font-semibold text-blue-800 mb-2">
+       Manfaat Membaca
+      </h4>
+      <p class="text-blue-700">
+       Ketahui berbagai manfaat membaca yang dapat membantu kamu tumbuh dan berkembang dengan baik.
+      </p>
+     </article>
+    </div>
+   </section>
+   <section class="mb-20" id="video">
+    <h3 class="text-3xl font-bold text-blue-900 mb-8 text-center">
+     Video Literasi Edukatif
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+     <article aria-label="Video literasi Cara Meningkatkan Kemampuan Membaca" class="clickable bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.youtube.com/watch?v=5MgBikgcWnY', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.youtube.com/watch?v=5MgBikgcWnY', '_blank')}" tabindex="0">
+      <img alt="Thumbnail video edukasi anak-anak sedang membaca buku dengan latar belakang cerah dan ceria" class="w-full object-cover h-56" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fd08066c-46b4-48c8-e9e6-93e88914b423.jpg" width="400"/>
+      <div class="p-5">
+       <h4 class="text-xl font-semibold text-blue-800 mb-2">
+        Cara Meningkatkan Kemampuan Membaca
+       </h4>
+       <p class="text-blue-700">
+        Video tutorial yang menjelaskan tips dan trik agar kamu bisa membaca dengan lebih cepat dan tepat.
+       </p>
+      </div>
+     </article>
+     <article aria-label="Video literasi Pentingnya Membaca Buku Sejak Dini" class="clickable bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.youtube.com/watch?v=3E7hkPZ-HTk', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.youtube.com/watch?v=3E7hkPZ-HTk', '_blank')}" tabindex="0">
+      <img alt="Thumbnail video edukasi anak kecil sedang membaca buku bersama orang tua di rumah" class="w-full object-cover h-56" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b392a13e-c7f3-4d84-c119-6b4e2e43acf8.jpg" width="400"/>
+      <div class="p-5">
+       <h4 class="text-xl font-semibold text-blue-800 mb-2">
+        Pentingnya Membaca Sejak Dini
+       </h4>
+       <p class="text-blue-700">
+        Video yang mengajak anak-anak dan orang tua untuk mulai membiasakan membaca sejak usia dini.
+       </p>
+      </div>
+     </article>
+     <article aria-label="Video literasi Strategi Membaca Cepat dan Efektif" class="clickable bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.youtube.com/watch?v=VbZ9v6Q6v6k', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.youtube.com/watch?v=VbZ9v6Q6v6k', '_blank')}" tabindex="0">
+      <img alt="Thumbnail video edukasi anak remaja sedang membaca buku dan mencatat di kelas" class="w-full object-cover h-56" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a96f74e6-12d7-4733-3f97-5430874f14e7.jpg" width="400"/>
+      <div class="p-5">
+       <h4 class="text-xl font-semibold text-blue-800 mb-2">
+        Strategi Membaca Cepat dan Efektif
+       </h4>
+       <p class="text-blue-700">
+        Pelajari cara membaca cepat tanpa mengurangi pemahaman melalui video edukasi ini.
+       </p>
+      </div>
+     </article>
+     <article aria-label="Video literasi Membaca dan Menulis untuk Anak Sekolah" class="clickable bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.youtube.com/watch?v=Q1p6v6v6v6v', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.youtube.com/watch?v=Q1p6v6v6v6v', '_blank')}" tabindex="0">
+      <img alt="Thumbnail video edukasi anak-anak sedang belajar membaca dan menulis di kelas" class="w-full object-cover h-56" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/02ee2ce2-0232-4a96-47dd-97d57b515b2b.jpg" width="400"/>
+      <div class="p-5">
+       <h4 class="text-xl font-semibold text-blue-800 mb-2">
+        Membaca dan Menulis untuk Anak Sekolah
+       </h4>
+       <p class="text-blue-700">
+        Video pembelajaran yang mengajarkan dasar membaca dan menulis dengan cara menyenangkan.
+       </p>
+      </div>
+     </article>
+     <article aria-label="Video literasi Membaca Cerita dan Memahami Isi" class="clickable bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.youtube.com/watch?v=Z9v6v6v6v6v', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.youtube.com/watch?v=Z9v6v6v6v6v', '_blank')}" tabindex="0">
+      <img alt="Thumbnail video edukasi anak-anak sedang mendengarkan cerita dan membaca buku bersama" class="w-full object-cover h-56" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cc85b4ce-f16b-4f03-1048-1dd48867a65d.jpg" width="400"/>
+      <div class="p-5">
+       <h4 class="text-xl font-semibold text-blue-800 mb-2">
+        Membaca Cerita dan Memahami Isi
+       </h4>
+       <p class="text-blue-700">
+        Video yang mengajarkan cara memahami isi cerita dengan mudah dan menyenangkan.
+       </p>
+      </div>
+     </article>
+     <article aria-label="Video literasi Membaca dan Menulis Kreatif" class="clickable bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.youtube.com/watch?v=Y6v6v6v6v6v', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.youtube.com/watch?v=Y6v6v6v6v6v', '_blank')}" tabindex="0">
+      <img alt="Thumbnail video edukasi anak-anak sedang menulis dan menggambar di kelas" class="w-full object-cover h-56" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4c78aade-ec1b-4298-59ec-05981889f6cc.jpg" width="400"/>
+      <div class="p-5">
+       <h4 class="text-xl font-semibold text-blue-800 mb-2">
+        Membaca dan Menulis Kreatif
+       </h4>
+       <p class="text-blue-700">
+        Video inspiratif yang mengajak siswa untuk menulis dan membaca dengan cara kreatif.
+       </p>
+      </div>
+     </article>
+     <article aria-label="Video literasi Membaca dan Menulis untuk Masa Depan" class="clickable bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400" onclick="window.open('https://www.youtube.com/watch?v=X6v6v6v6v6v', '_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.youtube.com/watch?v=X6v6v6v6v6v', '_blank')}" tabindex="0">
+      <img alt="Thumbnail video edukasi anak remaja sedang membaca dan menulis di depan komputer" class="w-full object-cover h-56" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/caa9e160-3dce-4357-721f-99a439809306.jpg" width="400"/>
+      <div class="p-5">
+       <h4 class="text-xl font-semibold text-blue-800 mb-2">
+        Membaca dan Menulis untuk Masa Depan
+       </h4>
+       <p class="text-blue-700">
+        Video motivasi yang mengajak siswa mempersiapkan masa depan dengan kemampuan literasi yang baik.
+       </p>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section class="mb-20 max-w-4xl mx-auto text-center fade-in" id="tentang">
+    <h3 class="text-3xl font-bold text-blue-900 mb-6">
+     Tentang Website Literasi Sekolah
+    </h3>
+    <p class="text-blue-700 text-lg leading-relaxed">
+     Website ini dibuat untuk membantu para siswa meningkatkan kemampuan literasi mereka melalui materi yang mudah dipahami dan video edukatif. Kami percaya bahwa literasi adalah kunci utama untuk membuka dunia pengetahuan dan masa depan yang cerah.
+    </p>
+   </section>
+   <section class="mb-20 max-w-4xl mx-auto fade-in" id="kontak">
+    <h3 class="text-3xl font-bold text-blue-900 mb-6 text-center">
+     Kontak Kami
+    </h3>
+    <form action="mailto:literasi@sekolahku.sch.id" class="bg-white rounded-lg shadow-lg p-8 max-w-xl mx-auto" enctype="text/plain" method="POST">
+     <div class="mb-6">
+      <label class="block text-blue-800 font-semibold mb-2" for="nama">
+       Nama
+      </label>
+      <input class="w-full border border-blue-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" id="nama" name="nama" placeholder="Masukkan nama kamu" required="" type="text"/>
+     </div>
+     <div class="mb-6">
+      <label class="block text-blue-800 font-semibold mb-2" for="email">
+       Email
+      </label>
+      <input class="w-full border border-blue-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" id="email" name="email" placeholder="Masukkan email kamu" required="" type="email"/>
+     </div>
+     <div class="mb-6">
+      <label class="block text-blue-800 font-semibold mb-2" for="pesan">
+       Pesan
+      </label>
+      <textarea class="w-full border border-blue-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" id="pesan" name="pesan" placeholder="Tulis pesan atau pertanyaan kamu" required="" rows="4"></textarea>
+     </div>
+     <button class="w-full bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 rounded-md transition" type="submit">
+      Kirim Pesan
+     </button>
+    </form>
+   </section>
+  </main>
+  <footer class="bg-blue-700 text-white py-6 text-center fade-in">
+   <p>
+    © 2024 Literasi Sekolah. Semua hak cipta dilindungi.
+   </p>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Add fade-in class on page load for entrance effect
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        el.style.opacity = '0';
+        el.style.animation = 'fadeInAnimation 1.2s ease forwards';
+      });
+    });
+  </script>
+ </body>
+</html>
