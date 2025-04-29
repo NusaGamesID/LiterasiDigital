@@ -1,0 +1,452 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Situs Literasi Sekolah
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Login Page -->
+  <main class="flex flex-col justify-center items-center min-h-screen bg-gradient-to-tr from-blue-400 to-indigo-600 px-4" id="login-page">
+   <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-8 fade-in">
+    <h1 class="text-3xl font-semibold text-center text-indigo-700 mb-6">
+     Login Situs Literasi
+    </h1>
+    <p class="mb-4 text-center text-gray-700">
+     Masukkan username dan password berikut untuk masuk:
+     <br/>
+     <span class="font-mono bg-indigo-100 px-2 py-1 rounded">
+      Username: anaksmansa
+     </span>
+     <br/>
+     <span class="font-mono bg-indigo-100 px-2 py-1 rounded">
+      Password: Smansa123*
+     </span>
+    </p>
+    <form autocomplete="off" class="space-y-5" id="login-form" novalidate="">
+     <div>
+      <label class="block text-gray-700 font-semibold mb-1" for="username">
+       Username
+      </label>
+      <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" id="username" name="username" placeholder="Masukkan username" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-gray-700 font-semibold mb-1" for="password">
+       Password
+      </label>
+      <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" id="password" name="password" placeholder="Masukkan password" required="" type="password"/>
+     </div>
+     <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-md transition" type="submit">
+      Login
+     </button>
+    </form>
+    <div class="mt-6 text-center">
+     <p class="text-gray-600 mb-3">
+      Atau login menggunakan akun Google
+     </p>
+     <button aria-label="Login dengan Google" class="inline-flex items-center justify-center space-x-2 border border-gray-300 rounded-md px-4 py-2 hover:bg-gray-100 transition" id="google-login">
+      <img alt="Logo Google berwarna merah, kuning, hijau, dan biru" class="w-5 h-5" height="20" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f84e36b0-c933-4601-d809-8ff5572d3df1.jpg" width="20"/>
+      <span class="text-gray-700 font-semibold">
+       Login dengan Google
+      </span>
+     </button>
+    </div>
+    <p class="mt-4 text-red-600 font-semibold text-center hidden" id="login-error">
+    </p>
+   </div>
+  </main>
+  <!-- Main Content -->
+  <main class="hidden flex-col min-h-screen bg-white fade-in" id="main-content">
+   <header class="bg-indigo-700 text-white shadow-md sticky top-0 z-30">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+     <h1 class="text-2xl font-bold mb-3 sm:mb-0">
+      Situs Literasi Sekolah
+     </h1>
+     <ul class="flex flex-wrap gap-6 text-indigo-200 font-semibold text-sm sm:text-base">
+      <li>
+       <a class="hover:text-white transition" href="#resources">
+        Sumber Daya
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white transition" href="#videos">
+        Video Edukasi
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white transition" href="#puzzle">
+        Permainan Teka Teki
+       </a>
+      </li>
+      <li>
+       <button class="text-indigo-300 hover:text-white font-semibold transition" id="logout-btn">
+        Logout
+        <i class="fas fa-sign-out-alt ml-1">
+        </i>
+       </button>
+      </li>
+     </ul>
+    </nav>
+   </header>
+   <section class="max-w-7xl mx-auto px-6 py-10 space-y-16">
+    <!-- Hero Section -->
+    <section class="text-center max-w-3xl mx-auto fade-in">
+     <h2 class="text-4xl font-extrabold text-indigo-800 mb-4">
+      Selamat Datang di Situs Literasi Sekolah
+     </h2>
+     <p class="text-lg text-indigo-600">
+      Temukan sumber daya, video edukasi, dan permainan teka teki yang menarik untuk meningkatkan kemampuan literasi kamu!
+     </p>
+     <img alt="Ilustrasi anak-anak sekolah sedang membaca buku di perpustakaan dengan latar belakang rak buku dan suasana cerah" class="mx-auto mt-8 rounded-lg shadow-lg" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3814e129-4c2d-414d-80e7-638172e3b935.jpg" width="600"/>
+    </section>
+    <!-- Resources Section -->
+    <section class="fade-in" id="resources">
+     <h3 class="text-3xl font-bold text-indigo-700 mb-6 border-b-2 border-indigo-300 pb-2">
+      Sumber Daya Literasi
+     </h3>
+     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <li class="bg-indigo-50 rounded-lg shadow p-5 hover:shadow-lg transition">
+       <h4 class="text-xl font-semibold text-indigo-800 mb-2">
+        Panduan Membaca Cepat
+       </h4>
+       <p class="text-indigo-700 mb-3">
+        Pelajari teknik membaca cepat untuk meningkatkan pemahaman dan kecepatan membaca kamu.
+       </p>
+       <a class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold" href="https://www.scribd.com/document/123456789/Panduan-Membaca-Cepat" rel="noopener noreferrer" target="_blank">
+        Baca Panduan
+        <i class="fas fa-external-link-alt ml-2">
+        </i>
+       </a>
+      </li>
+      <li class="bg-indigo-50 rounded-lg shadow p-5 hover:shadow-lg transition">
+       <h4 class="text-xl font-semibold text-indigo-800 mb-2">
+        Kumpulan Cerita Pendek
+       </h4>
+       <p class="text-indigo-700 mb-3">
+        Nikmati berbagai cerita pendek yang menarik dan mendidik untuk anak sekolah.
+       </p>
+       <a class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold" href="https://www.storyberries.com/cerita-pendek-anak/" rel="noopener noreferrer" target="_blank">
+        Baca Cerita
+        <i class="fas fa-external-link-alt ml-2">
+        </i>
+       </a>
+      </li>
+      <li class="bg-indigo-50 rounded-lg shadow p-5 hover:shadow-lg transition">
+       <h4 class="text-xl font-semibold text-indigo-800 mb-2">
+        Tips Menulis Kreatif
+       </h4>
+       <p class="text-indigo-700 mb-3">
+        Tingkatkan kemampuan menulis kamu dengan tips dan trik menulis kreatif yang mudah diikuti.
+       </p>
+       <a class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold" href="https://www.writingforward.com/creative-writing-tips" rel="noopener noreferrer" target="_blank">
+        Pelajari Tips
+        <i class="fas fa-external-link-alt ml-2">
+        </i>
+       </a>
+      </li>
+      <li class="bg-indigo-50 rounded-lg shadow p-5 hover:shadow-lg transition">
+       <h4 class="text-xl font-semibold text-indigo-800 mb-2">
+        Kamus Bahasa Indonesia
+       </h4>
+       <p class="text-indigo-700 mb-3">
+        Akses kamus lengkap untuk memperkaya kosakata dan pemahaman bahasa Indonesia kamu.
+       </p>
+       <a class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold" href="https://kbbi.kemdikbud.go.id/" rel="noopener noreferrer" target="_blank">
+        Buka Kamus
+        <i class="fas fa-external-link-alt ml-2">
+        </i>
+       </a>
+      </li>
+      <li class="bg-indigo-50 rounded-lg shadow p-5 hover:shadow-lg transition">
+       <h4 class="text-xl font-semibold text-indigo-800 mb-2">
+        Artikel Literasi Digital
+       </h4>
+       <p class="text-indigo-700 mb-3">
+        Pelajari pentingnya literasi digital di era teknologi saat ini.
+       </p>
+       <a class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold" href="https://www.commonsensemedia.org/literacy" rel="noopener noreferrer" target="_blank">
+        Baca Artikel
+        <i class="fas fa-external-link-alt ml-2">
+        </i>
+       </a>
+      </li>
+      <li class="bg-indigo-50 rounded-lg shadow p-5 hover:shadow-lg transition">
+       <h4 class="text-xl font-semibold text-indigo-800 mb-2">
+        Ebook Gratis untuk Pelajar
+       </h4>
+       <p class="text-indigo-700 mb-3">
+        Download ebook gratis yang cocok untuk pelajar sekolah menengah.
+       </p>
+       <a class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold" href="https://www.gutenberg.org/browse/scores/top" rel="noopener noreferrer" target="_blank">
+        Download Ebook
+        <i class="fas fa-external-link-alt ml-2">
+        </i>
+       </a>
+      </li>
+     </ul>
+    </section>
+    <!-- Videos Section -->
+    <section class="fade-in" id="videos">
+     <h3 class="text-3xl font-bold text-indigo-700 mb-6 border-b-2 border-indigo-300 pb-2">
+      Video Edukasi
+     </h3>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <article class="bg-indigo-50 rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+       <img alt="Thumbnail video edukasi tentang teknik membaca cepat dengan ilustrasi buku dan jam" class="rounded-md mb-4" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/618fa10f-017f-415e-0030-dec2a220dd32.jpg" width="400"/>
+       <h4 class="text-xl font-semibold text-indigo-800 mb-2">
+        Teknik Membaca Cepat
+       </h4>
+       <p class="text-indigo-700 mb-3 flex-grow">
+        Pelajari cara membaca cepat dan efektif untuk meningkatkan pemahaman.
+       </p>
+       <a class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold" href="https://www.youtube.com/watch?v=5MgBikgcWnY" rel="noopener noreferrer" target="_blank">
+        Tonton Video
+        <i class="fas fa-external-link-alt ml-2">
+        </i>
+       </a>
+      </article>
+      <article class="bg-indigo-50 rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+       <img alt="Thumbnail video edukasi tentang menulis kreatif dengan ilustrasi pena dan kertas" class="rounded-md mb-4" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fc056d1c-c8a7-4489-f9e2-948fac9b7bad.jpg" width="400"/>
+       <h4 class="text-xl font-semibold text-indigo-800 mb-2">
+        Menulis Kreatif untuk Pemula
+       </h4>
+       <p class="text-indigo-700 mb-3 flex-grow">
+        Tips dan trik menulis kreatif yang mudah diikuti oleh pelajar.
+       </p>
+       <a class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold" href="https://www.youtube.com/watch?v=1n3v6v6v6v6" rel="noopener noreferrer" target="_blank">
+        Tonton Video
+        <i class="fas fa-external-link-alt ml-2">
+        </i>
+       </a>
+      </article>
+      <article class="bg-indigo-50 rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+       <img alt="Thumbnail video edukasi tentang literasi digital dengan ilustrasi komputer dan buku" class="rounded-md mb-4" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/032ca2c0-52e5-4cab-6730-d76ef4b14aad.jpg" width="400"/>
+       <h4 class="text-xl font-semibold text-indigo-800 mb-2">
+        Pentingnya Literasi Digital
+       </h4>
+       <p class="text-indigo-700 mb-3 flex-grow">
+        Memahami literasi digital dan bagaimana memanfaatkannya secara bijak.
+       </p>
+       <a class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold" href="https://www.youtube.com/watch?v=2Xc9gXyf2G4" rel="noopener noreferrer" target="_blank">
+        Tonton Video
+        <i class="fas fa-external-link-alt ml-2">
+        </i>
+       </a>
+      </article>
+     </div>
+    </section>
+    <!-- Puzzle Section -->
+    <section class="fade-in max-w-3xl mx-auto" id="puzzle">
+     <h3 class="text-3xl font-bold text-indigo-700 mb-6 border-b-2 border-indigo-300 pb-2 text-center">
+      Permainan Teka Teki
+     </h3>
+     <div class="bg-indigo-50 rounded-lg shadow p-6">
+      <p class="text-indigo-800 text-lg mb-4" id="puzzle-question">
+       Memuat teka teki...
+      </p>
+      <input autocomplete="off" class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4" id="puzzle-answer" placeholder="Ketik jawaban kamu di sini" type="text"/>
+      <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
+       <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-md transition flex-1" id="submit-answer">
+        Jawab
+       </button>
+       <button class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 rounded-md transition flex-1" id="give-up">
+        Menyerah
+       </button>
+      </div>
+      <p class="mt-4 font-semibold text-center" id="puzzle-feedback">
+      </p>
+     </div>
+    </section>
+   </section>
+   <footer class="bg-indigo-700 text-indigo-200 text-center py-6 mt-auto">
+    <p>
+     © 2024 Situs Literasi Sekolah - Semua hak dilindungi.
+    </p>
+   </footer>
+  </main>
+  <script>
+   // Login logic
+    const loginPage = document.getElementById('login-page');
+    const mainContent = document.getElementById('main-content');
+    const loginForm = document.getElementById('login-form');
+    const loginError = document.getElementById('login-error');
+    const googleLoginBtn = document.getElementById('google-login');
+    const logoutBtn = document.getElementById('logout-btn');
+
+    // Hardcoded credentials
+    const validUsername = 'anaksmansa';
+    const validPassword = 'Smansa123*';
+
+    // Check if user is logged in (simple localStorage flag)
+    function isLoggedIn() {
+      return localStorage.getItem('loggedIn') === 'true';
+    }
+
+    function showMainContent() {
+      loginPage.classList.add('hidden');
+      mainContent.classList.remove('hidden');
+      mainContent.classList.add('fade-in');
+    }
+
+    function showLoginPage() {
+      mainContent.classList.add('hidden');
+      loginPage.classList.remove('hidden');
+      loginPage.classList.add('fade-in');
+    }
+
+    if (isLoggedIn()) {
+      showMainContent();
+    } else {
+      showLoginPage();
+    }
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      loginError.classList.add('hidden');
+      const username = loginForm.username.value.trim();
+      const password = loginForm.password.value;
+
+      if (username === validUsername && password === validPassword) {
+        localStorage.setItem('loggedIn', 'true');
+        showMainContent();
+        loginForm.reset();
+      } else {
+        loginError.textContent = 'Username atau password salah. Silakan coba lagi.';
+        loginError.classList.remove('hidden');
+      }
+    });
+
+    // Google login simulation (for demo only)
+    googleLoginBtn.addEventListener('click', () => {
+      // Simulate Google login success
+      localStorage.setItem('loggedIn', 'true');
+      showMainContent();
+    });
+
+    logoutBtn.addEventListener('click', () => {
+      localStorage.removeItem('loggedIn');
+      showLoginPage();
+    });
+
+    // Puzzle game logic
+    const puzzles = [
+      {
+        question: 'Apa sinonim dari kata "cerdas"?',
+        answer: 'pintar',
+      },
+      {
+        question: 'Sebutkan nama tokoh utama dalam cerita "Malin Kundang".',
+        answer: 'malin kundang',
+      },
+      {
+        question: 'Apa arti kata "literasi"?',
+        answer: 'kemampuan membaca dan menulis',
+      },
+      {
+        question: 'Apa lawan kata dari "terang"?',
+        answer: 'gelap',
+      },
+      {
+        question: 'Sebutkan satu jenis teks narasi.',
+        answer: 'cerita',
+      },
+      {
+        question: 'Apa nama alat untuk menulis di papan tulis?',
+        answer: 'kapur',
+      },
+      {
+        question: 'Apa nama buku yang berisi kumpulan kata dan artinya?',
+        answer: 'kamus',
+      },
+      {
+        question: 'Apa nama tokoh dalam cerita rakyat yang berubah menjadi batu?',
+        answer: 'malin kundang',
+      },
+      {
+        question: 'Apa sinonim dari kata "menulis"?',
+        answer: 'mencatat',
+      },
+      {
+        question: 'Apa arti kata "edukasi"?',
+        answer: 'pendidikan',
+      },
+    ];
+
+    const puzzleQuestionEl = document.getElementById('puzzle-question');
+    const puzzleAnswerEl = document.getElementById('puzzle-answer');
+    const submitAnswerBtn = document.getElementById('submit-answer');
+    const giveUpBtn = document.getElementById('give-up');
+    const puzzleFeedbackEl = document.getElementById('puzzle-feedback');
+
+    let currentPuzzleIndex = -1;
+
+    function loadRandomPuzzle() {
+      puzzleFeedbackEl.textContent = '';
+      puzzleAnswerEl.value = '';
+      currentPuzzleIndex = Math.floor(Math.random() * puzzles.length);
+      puzzleQuestionEl.textContent = puzzles[currentPuzzleIndex].question;
+    }
+
+    function normalizeAnswer(text) {
+      return text.trim().toLowerCase().replace(/[^a-z0-9\s]/gi, '');
+    }
+
+    submitAnswerBtn.addEventListener('click', () => {
+      const userAnswer = normalizeAnswer(puzzleAnswerEl.value);
+      if (!userAnswer) {
+        puzzleFeedbackEl.textContent = 'Silakan masukkan jawaban terlebih dahulu.';
+        puzzleFeedbackEl.classList.remove('text-green-600');
+        puzzleFeedbackEl.classList.add('text-red-600');
+        return;
+      }
+      const correctAnswer = normalizeAnswer(puzzles[currentPuzzleIndex].answer);
+      if (userAnswer === correctAnswer) {
+        puzzleFeedbackEl.textContent = 'Jawaban benar! Selamat!';
+        puzzleFeedbackEl.classList.remove('text-red-600');
+        puzzleFeedbackEl.classList.add('text-green-600');
+        setTimeout(() => {
+          loadRandomPuzzle();
+        }, 3000);
+      } else {
+        puzzleFeedbackEl.textContent = 'Jawaban salah, coba lagi ya.';
+        puzzleFeedbackEl.classList.remove('text-green-600');
+        puzzleFeedbackEl.classList.add('text-red-600');
+      }
+    });
+
+    giveUpBtn.addEventListener('click', () => {
+      const correctAnswer = puzzles[currentPuzzleIndex].answer;
+      puzzleFeedbackEl.textContent = `Jawaban yang benar adalah: "${correctAnswer}". Berikut teka teki baru.`;
+      puzzleFeedbackEl.classList.remove('text-red-600');
+      puzzleFeedbackEl.classList.add('text-indigo-700');
+      setTimeout(() => {
+        loadRandomPuzzle();
+      }, 4000);
+    });
+
+    // Load first puzzle on main content show
+    if (isLoggedIn()) {
+      loadRandomPuzzle();
+    }
+  </script>
+ </body>
+</html>
